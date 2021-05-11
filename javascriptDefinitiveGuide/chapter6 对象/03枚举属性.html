@@ -4,7 +4,7 @@
  * @Author: Ellen
  * @Date: 2021-05-10 21:43:47
  * @LastEditors: Ellen
- * @LastEditTime: 2021-05-11 21:01:50
+ * @LastEditTime: 2021-05-11 21:21:56
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -16,9 +16,19 @@
   </head>
   <body>
     <script>
+      let notebook = Symbol();
       const book = {
-        author: {},
+        author: "lili",
+        reader: "jack",
+        book: "living in love",
+        [notebook]: "love noted",
       };
+      let keys = Object.getOwnPropertyNames(book);
+      console.log("1", keys);
+      let keys1 = Reflect.ownKeys(book);
+      console.log("2", keys1);
+      let keys2 = Object.getOwnPropertySymbols(book);
+      console.log("3", keys2);
     </script>
   </body>
 </html>
