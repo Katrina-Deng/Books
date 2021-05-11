@@ -1,0 +1,37 @@
+<!--
+ * @Des: 
+ * @Version: 
+ * @Author: Ellen
+ * @Date: 2021-05-10 21:43:47
+ * @LastEditors: Ellen
+ * @LastEditTime: 2021-05-10 22:02:27
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const o = {
+        name: "lili",
+        sex: "women",
+      };
+      // 1.运算属性 2. 动态传值 []运算符
+      const customer = {
+        address0: "广州",
+        address1: "北京",
+        address2: "上海",
+        address3: "深圳",
+      };
+      let arr = "";
+      for (let i = 0; i < 4; i++) {
+        arr += customer[`address${i}`] + "\n";
+      }
+      console.log(arr);
+    </script>
+  </body>
+</html>

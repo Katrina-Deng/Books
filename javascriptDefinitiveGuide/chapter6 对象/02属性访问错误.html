@@ -1,0 +1,39 @@
+<!--
+ * @Des: 
+ * @Version: 
+ * @Author: Ellen
+ * @Date: 2021-05-10 21:43:47
+ * @LastEditors: Ellen
+ * @LastEditTime: 2021-05-10 22:43:40
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 避免typeError
+      let subname = undefined;
+      const book = {
+        author: {
+          // surname: "Ellen",
+        },
+      };
+      if (book) {
+        if (book.author) {
+          subname = book.author.surname;
+        }
+      }
+      subname = book && book.author && book.author.surname;
+
+      console.log("subname", subname);
+
+      let surname2 = book?.author?.surname;
+      console.log("subname2", subname);
+    </script>
+  </body>
+</html>
