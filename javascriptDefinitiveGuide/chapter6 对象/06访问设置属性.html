@@ -1,0 +1,43 @@
+<!--
+ * @Des: 
+ * @Version: 
+ * @Author: Ellen
+ * @Date: 2021-05-10 21:43:47
+ * @LastEditors: Ellen
+ * @LastEditTime: 2021-05-11 22:17:13
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const num = {
+        _n: 0,
+        get next() {
+          return this._n++;
+        },
+        set next(n) {
+          if (n > this._n) {
+            this._n = n;
+          } else {
+            throw new Error("n必须大于当前值");
+          }
+        },
+      };
+
+      num.next = 10;
+      console.log("1", num.next);
+      num.next;
+      console.log("2", num.next);
+      num.next;
+      console.log("3", num.next);
+      num.next = 3;
+      console.log("3", num.next);
+    </script>
+  </body>
+</html>
