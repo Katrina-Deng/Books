@@ -1,0 +1,44 @@
+<!--
+ * @Des: 
+ * @Version: 
+ * @Author: Ellen
+ * @Date: 2021-05-10 21:43:47
+ * @LastEditors: Ellen
+ * @LastEditTime: 2021-05-11 21:38:37
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /**
+       * @name: Ellen
+       * @test: test font
+       * @msg: 对象合并
+       * @param {*} target
+       * @param {array} sources
+       * @return {*}
+       */
+      function merge(target, ...sources) {
+        console.log(...sources);
+        for (const source of sources) {
+          for (const key of Object.keys(source)) {
+            if (!(key in target)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+      let arr = Object.assign({ x: 1 }, { x: 2, y: 2 }, { y: 3, z: 4 });
+      let arr1 = merge({ x: 1 }, { x: 2, y: 2 }, { y: 3, z: 4 });
+      console.log("arr", arr); // arr {x: 2, y: 3, z: 4} del x:1
+      console.log("arr1", arr1); //arr1 {x: 1, y: 2, z: 4} 只复制不存在的属性
+    </script>
+  </body>
+</html>
