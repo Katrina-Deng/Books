@@ -1,0 +1,32 @@
+<!--
+ * @Des: 
+ * @Version: 
+ * @Author: Ellen
+ * @Date: 2021-05-12 21:48:39
+ * @LastEditors: Ellen
+ * @LastEditTime: 2021-05-12 21:54:24
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>可迭代对象都能用...</h1>
+    <ol>
+      <li>字符串</li>
+      <li>数组</li>
+      <li>集合对象 SET 去重</li>
+    </ol>
+    <script>
+      let arr = [..."EllenHelloArray"];
+      console.log("arr String", arr);
+
+      let arr1 = [..."liliorlisaorolivera"];
+      console.log("arr1 Set", [...new Set(arr1)]);
+    </script>
+  </body>
+</html>
