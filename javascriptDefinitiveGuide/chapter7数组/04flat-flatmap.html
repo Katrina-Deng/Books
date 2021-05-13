@@ -1,0 +1,35 @@
+<!--
+ * @Des: 
+ * @Version: 
+ * @Author: Ellen
+ * @Date: 2021-05-12 21:48:39
+ * @LastEditors: Ellen
+ * @LastEditTime: 2021-05-13 21:05:07
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>04flat</h1>
+    <ol>
+      <li>flat</li>
+      <li>flatmap</li>
+    </ol>
+    <script>
+      let arr1 = [1, [2, [3, [4]]]];
+
+      // flat
+      // console.log("arr", arr1.flat().flat().flat());
+      // console.log("arr", arr1.flat(2)); //[1, 2, 3, Array(1)]
+      let arr2 = arr1.flatMap((item) => {
+        return item;
+      });
+      console.log("arr1", arr2);
+    </script>
+  </body>
+</html>
