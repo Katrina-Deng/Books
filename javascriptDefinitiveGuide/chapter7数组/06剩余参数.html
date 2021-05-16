@@ -1,0 +1,32 @@
+<!--
+ * @Des: 
+ * @Version: 剩余参数
+ * @Author: Ellen
+ * @Date: 2021-05-16 13:07:03
+ * @LastEditors: Ellen
+ * @LastEditTime: 2021-05-16 13:09:40
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function max(first = -Infinity, ...rest) {
+        let maxvalue = first;
+        for (const item of rest) {
+          if (item > maxvalue) {
+            maxvalue = item;
+          }
+        }
+        return maxvalue;
+      }
+
+      console.log(max(1, 1000, 77, 55, 777, 444, 100, 3));
+    </script>
+  </body>
+</html>
