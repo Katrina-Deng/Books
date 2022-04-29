@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>函数作为值</title>
+  </head>
+  <body>
+    <!-- 阶乘 -->
+    <!-- factorial -->
+    <script>
+      //   function factorial(num) {
+      //     //   阶乘出口乘到1为止
+      //     if (num <= 1) {
+      //       return 1
+      //     }
+      //     return num * factorial(num - 1)
+      //   }
+      //   let res = factorial(10)
+      //   console.log(res)
+      //   function outer() {
+      //     inner()
+      //   }
+      //   function inner() {
+      //     console.log(inner.caller) // 输出的是outer函数体
+      //   }
+      //   outer()
+
+      function King() {
+        if (!new.target) {
+          throw 'King must be instantiated using "new"'
+        }
+        console.log('King instantiated using "new"')
+      }
+      new King() // King instantiated using "new"
+      King() // Error: King must be instantiated using "new"
+    </script>
+  </body>
+</html>

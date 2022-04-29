@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>尾调用优化</title>
+  </head>
+  <body>
+    <script>
+      // normal fibo
+      function fib(n) {
+        console.log(n)
+        if (n < 2) {
+          return n
+        }
+        return fib(n - 1) + fib(n - 2)
+      }
+    //   console.log(fib(0)) // 0
+    //   console.log(fib(1)) // 1
+    //   console.log(fib(2)) // 1
+      console.log(fib(3)) // 2
+    //   console.log(fib(4)) // 3
+    //   console.log(fib(5)) // 5
+    //   console.log(fib(6)) // 8
+    </script>
+  </body>
+</html>
